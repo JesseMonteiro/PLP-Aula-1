@@ -7,8 +7,9 @@ public class Lote {
     int quantidade;
     Date dataVal;
 
-    public Lote(Produto produto, Date dataFab, Date dataVal) {
+    public Lote(Produto produto, int quantidade, Date dataFab, Date dataVal) {
         this.produto = produto;
+        this.quantidade = quantidade;
         this.dataFab = dataFab;
         this.dataVal = dataVal;
      }
