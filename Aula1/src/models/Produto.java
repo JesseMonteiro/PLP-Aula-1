@@ -1,3 +1,7 @@
+package models;
+
+import java.rmi.server.UID;
+
 public class Produto {
 
     String id;
@@ -5,9 +9,11 @@ public class Produto {
     String fabricante;
 
     public Produto(String nome, String fabricante) {
+        this.id = new UID().toString();
         this.nome = nome;
         this.fabricante = fabricante;
     }
+
 
     @Override
     public String toString() {
@@ -16,5 +22,26 @@ public class Produto {
                 ", Nome='" + nome + '\'' +
                 ", Fabricante='" + fabricante + '\'' +
                 '}';
+    }
+
+    public String getId() {
+        return id;
+    }
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
     }
 }
