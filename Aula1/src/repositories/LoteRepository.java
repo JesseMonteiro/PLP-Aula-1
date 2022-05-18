@@ -28,7 +28,7 @@ public class LoteRepository {
         this.lotes.replace(lote.getId(), lote).getId();
     }
 
-    public String addProduto(Lote lote){
+    public String addLote(Lote lote){
         this.lotes.put(lote.getId(), lote).getId();
         return (lote.getId());
     }
